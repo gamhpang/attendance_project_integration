@@ -1,9 +1,10 @@
 # attendance_project_integration
 
-1. Objective:
+Objective:
   Integrate project and task selection into the employee attendance system, allowing users to specify the project, task, and description during check-in/check-out.
 
-3. Changes Made:
+Changes Made:
+
 Frontend Modifications:
     • View Template Extension:
         ◦ Extended the existing HrAttendanceMyMainMenu template to include two new dropdowns:
@@ -24,7 +25,7 @@ Backend Modifications:
         ◦ Overridden the attendance_manual method to record the project, task, and description during attendance updates.
         ◦ Logic ensures that the description is stored appropriately depending on whether the employee is checking in or out.
         
-3. New Database Structures:
+New Database Structures:
     • Added the following fields in the hr.attendance model:
         ◦ project_id: A Many2one field linking to the project.project model.
         ◦ task_id: A Many2one field linking to the project.task model.
